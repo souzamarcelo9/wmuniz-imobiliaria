@@ -4,13 +4,13 @@ import { getAuth } from "firebase/auth";
 import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
-  // Insira suas credenciais do console do Firebase aqui
-  apiKey: "AIzaSyAQWjnVV6iOmWAEROyXF4mzlRe3PpJxvvg",
-  authDomain: "realstate-walter.firebaseapp.com",
-  projectId: "realstate-walter",
-  storageBucket: "realstate-walter.firebasestorage.app",
-  messagingSenderId: "1035348912513",
-  appId: "1:1035348912513:web:01e06d2b0ba69691626080"
+  // No Vite, usamos import.meta.env em vez de process.env
+  apiKey: import.meta.env.VITE_API_KEY,
+  authDomain: import.meta.env.VITE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_MESSAGE_SENDER_ID,
+  appId: import.meta.env.VITE_APP_ID
 };
 
 const app = initializeApp(firebaseConfig);
